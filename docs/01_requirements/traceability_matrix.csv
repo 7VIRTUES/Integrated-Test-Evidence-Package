@@ -1,12 +1,13 @@
-Requirement ID,Requirement Summary,Priority,Verification Method,Test Case ID,Test Description,Status,Evidence Reference,Notes
-SYS-REQ-0001,Capture and uniquely identify all stakeholder needs,SHALL,Review,TC-0001,Review of requirements document for unique IDs,Not Started,,
-SYS-REQ-0002,Decompose high-level needs into verifiable requirements,SHALL,Review,TC-0002,Review of requirements decomposition,Not Started,,
-SYS-REQ-0003,Provide traceability matrix linking requirements to verification,SHALL,Analysis,TC-0003,Analysis of traceability matrix completeness,Not Started,,
-SYS-REQ-0004,Execute verification activities and record objective evidence,SHALL,Test,TC-0004,Test execution and evidence collection,Not Started,,
-SYS-REQ-0005,Generate verification completion report at milestones,SHOULD,Demonstration,TC-0005,Demonstration of report generation,Not Started,,
-SYS-REQ-0006,Maintain requirements baseline under configuration control,SHALL,Review,TC-0006,Review of CM records,Not Started,,
-SYS-REQ-0007,Assess requirement changes for verification impact before approval,SHALL,Review,TC-0007,Review of change assessment process,Not Started,,
-SYS-REQ-0008,Interface with data pipeline to ingest test results automatically,SHOULD,Test,TC-0008,Integration test of data pipeline ingestion,Not Started,,
-SUB-REQ-0001,Assign unique identifier to each requirement upon creation,SHALL,Test,TC-0009,Automated check for unique IDs on creation,Not Started,,
-SUB-REQ-0002,Flag requirements with no assigned verification method,SHALL,Test,TC-0010,Automated check for unlinked requirements,Not Started,,
-SUB-REQ-0003,Record pass/fail status and evidence for each test case,SHALL,Test,TC-0011,Verification of test result recording,Not Started,,
+ReqID,Requirement,VerificationMethod,TestCaseID,EvidencePath,Notes
+SR-001,"Distance within [100,5000] mm",Test,TC-001,results/TC-001_distance_range.md,"Verify min/max violations = 0"
+SR-002,"Distance abs error <= 20 mm",Analysis,TC-002,analysis/TC-002_distance_accuracy.ipynb,"Compare to ground truth"
+SR-003,"Temperature within [-20,85] C",Test,TC-003,results/TC-003_temp_range.md,"Verify min/max violations = 0"
+SR-004,"Temperature abs error <= 1.0 C",Analysis,TC-004,analysis/TC-004_temp_accuracy.ipynb,"Compare to ground truth"
+SR-005,"Sample rate 10 Hz +/- 0.5 Hz",Analysis,TC-005,analysis/TC-005_sample_rate.ipynb,"Compute rate over windows"
+SR-006,"Delta t 100ms +/- 15ms for 99%",Analysis,TC-006,analysis/TC-006_jitter.ipynb,"Quantile-based check"
+SR-007,"Dropout rate <= 0.5%",Analysis,TC-007,analysis/TC-007_dropouts.ipynb,"Missing index/time gaps"
+SR-008,"Timestamp strictly monotonic",Test,TC-008,results/TC-008_timestamp_monotonic.md,"No duplicates/decreases"
+SR-009,"No missing fields",Test,TC-009,results/TC-009_completeness.md,"Schema/parse validation"
+SR-010,"FAULT when out of range",Test,TC-010,results/TC-010_status_flags.md,"Inject out-of-range"
+SR-011,"Drift <= 10mm per 10min",Analysis,TC-011,analysis/TC-011_drift.ipynb,"Slope of bias vs time"
+SR-012,"Log format parseable (CSV/JSONL)",Test,TC-012,results/TC-012_log_format.md,"Parser must succeed"
