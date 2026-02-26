@@ -1,0 +1,6 @@
+Requirement ID,Requirement Title,Priority,Verification Method,Test Case ID,Test Case Title,Test Result,Status,Notes
+REQ-001,[Requirement Title],High,Test,TC-001,[Test Case Title],Pending,Draft,
+REQ-002,[Requirement Title],Medium,Demonstration,TC-002,[Test Case Title],Pending,Draft,
+REQ-003,[Performance Requirement Title],High,Test,TC-003,[Test Case Title],Pending,Draft,
+REQ-004,[Interface Requirement Title],Medium,Inspection,TC-004,[Test Case Title],Pending,Draft,
+REQ-005,[Constraint Title],Low,Analysis,TC-005,[Test Case Title],Pending,Draft,
